@@ -1,6 +1,5 @@
 # Load libraries
 from pandas import read_csv
-# import pandas as pd
 from pandas.plotting import scatter_matrix
 from matplotlib import pyplot as plt
 from sklearn.model_selection import train_test_split
@@ -21,15 +20,19 @@ names=['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset=read_csv(url, names=names)
 
 # check if dataset is loaded properly
+
+# gives info of all attributes in details
 # dataset.info()
+
+# head; is different from .head
 # print(dataset.head())
+# print(dataset.head(20))
 
+# rows x columns
+# print(dataset.shape)
 
+# statistical analysis
+# print(dataset.describe())
 
-
-
-
-
-
-
-
+# class distribution
+# print(dataset.groupby('class').size())
