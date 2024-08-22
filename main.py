@@ -51,3 +51,12 @@ dataset.hist()
 plt.show()
 '''
 
+# scatterplot; interactions between attributes (multivariate)
+'''
+scatter_matrix(dataset)
+plt.show()
+'''
+
+
+
+
