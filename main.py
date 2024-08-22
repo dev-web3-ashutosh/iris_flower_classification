@@ -36,3 +36,18 @@ dataset=read_csv(url, names=names)
 
 # class distribution
 # print(dataset.groupby('class').size())
+
+# visualizations
+
+# box and whisker (univariate)
+'''
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+plt.show()
+'''
+
+# histogram (univariate)
+'''
+dataset.hist()
+plt.show()
+'''
+
