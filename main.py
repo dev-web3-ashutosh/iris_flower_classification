@@ -65,5 +65,13 @@ y=array[:,-1]
 # split the data
 x_train, x_test, y_train, y_test=train_test_split(x,y,test_size=0.2, random_state=1)
 
+# create models
+models=[]
 
+models.append(('LR', LogisticRegression(solver='liblinear', multiclass='ovr')))
+models.append(('LDA', LinearDiscriminantAnalysis()))
+models.append(('KNN', KNeighborsClassifier()))
+models.append(('CART', DecisionTreeClassifier()))
+models.append(('NB', GaussianNB()))
+models.append(('SVM', SVC(gamma='auto')))
 
