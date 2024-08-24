@@ -86,3 +86,8 @@ for name, model in models:
     names.append(name)
     print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
 
+# compare results
+plt.boxplot(results, tick_labels=names)
+plt.title('Comparison of Algorithms')
+plt.show()
+
