@@ -12,9 +12,9 @@ Libraries used -
 <br></br>
 <img width="164" alt="class_distribution" src="https://github.com/user-attachments/assets/29813153-7755-44f5-9ca0-e1ea7367c5da">
 <br></br>
-![box_and_whisker](https://github.com/user-attachments/assets/ab8b697c-bb5b-44fc-a03f-ab8c384cff68)
+<img width="480" alt="box_and_whisker" src="https://github.com/user-attachments/assets/ab8b697c-bb5b-44fc-a03f-ab8c384cff68">
 <br></br>
-![histogram](https://github.com/user-attachments/assets/96724994-8b42-4791-b914-1032fc73a2f7)
+<img width="480" alt="histogram" src="https://github.com/user-attachments/assets/96724994-8b42-4791-b914-1032fc73a2f7">
 <br></br>
 <img width="320" alt="scatterplot_matrix" src="https://github.com/user-attachments/assets/5b5b1b0f-e6b0-4bd1-809e-bf76a87f9679">
 <br></br>
