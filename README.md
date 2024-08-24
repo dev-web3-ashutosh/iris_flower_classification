@@ -1,4 +1,6 @@
 # iris_flower_classification
+Libraries used -
+<ul><li>pandas</li><li>matplotlib.pyplot</li><li>numpy</li><li>sklearn</li><li>pickle</li></ul>
 <br></br>
 <img width="240" alt="info" src="https://github.com/user-attachments/assets/f15cdfb4-2899-46c5-b594-85f5dbd0ad8f">
 <br></br>
