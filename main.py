@@ -1,6 +1,7 @@
 # Load libraries
 from pandas import read_csv
 from pandas.plotting import scatter_matrix
+from numpy import array
 from matplotlib import pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
@@ -14,6 +15,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+import pickle
 
 url="https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
 names=['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
@@ -65,6 +67,7 @@ y=array[:,-1]
 # split the data
 x_train, x_test, y_train, y_test=train_test_split(x,y,test_size=0.2, random_state=1)
 
+'''
 # create models
 models=[]
 
@@ -74,7 +77,9 @@ models.append(('KNN', KNeighborsClassifier()))
 models.append(('CART', DecisionTreeClassifier()))
 models.append(('NB', GaussianNB()))
 models.append(('SVM', SVC(gamma='auto')))
+'''
 
+'''
 # evaluate models
 results=[]
 names=[]
@@ -90,4 +95,26 @@ for name, model in models:
 plt.boxplot(results, tick_labels=names)
 plt.title('Comparison of Algorithms')
 plt.show()
+'''
 
+# make predictions using chosen model
+model=SVC(gamma='auto')
+model.fit(x_train, y_train)
+predictions=model.predict(x_test)
+
+'''
+# evaluate predictions
+print(accuracy_score(y_test, predictions))
+print(confusion_matrix(y_test, predictions))
+print(classification_report(y_test, predictions))
+'''
+
+# save model
+filename='iris_model.sav'
+pickle.dump(model, open(filename, 'wb'))
+
+# load model
+loaded_model=pickle.load(open(filename, 'rb'))
+# calculate accuracy
+result=loaded_model.score(x_test, y_test)
+print(result)
